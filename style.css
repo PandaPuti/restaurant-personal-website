@@ -37,7 +37,7 @@ h1, h2, h3 {
   font-family: "Kaushan Script", cursive;
 }
 
-nav {
+/* nav {
   margin: 1em auto 3em auto;
   width: min(1000px, 100%);
 }
@@ -62,7 +62,10 @@ nav a {
 
 nav a:hover {
   text-decoration: underline;
-}
+} */
+
+
+
 
 header, section {
   margin: 2em auto;
@@ -178,4 +181,141 @@ section h2 {
 
 .grid-container img:hover {
   scale: 1.05;
+}
+
+
+/* Navbar Styles */
+.navbar {
+  margin: 1em auto 3em auto;
+  padding: 1rem 2rem;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+ 
+/* Logo */
+.logo a {
+  color: var(--text-color);
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-family: Merriweather, Poppins;
+  font-weight: 600;
+  /* font-weight: bold; */
+  /* letter-spacing: 1px; */
+}
+ 
+/* Hide the checkbox */
+.menu-toggle {
+  display: none;
+}
+ 
+/* Navigation Menu */
+.nav-menu {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+  margin: 0;
+}
+ 
+.nav-menu li a {
+  color: var(--text-color);
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: text-decoration 0.3s ease-in;
+  /* padding: 0.5rem; */
+}
+ 
+.nav-menu li a:hover {
+  text-decoration: underline;
+}
+ 
+/* Hamburger Icon - Hidden by default on desktop */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 4px;
+}
+ 
+.hamburger .bar {
+  width: 25px;
+  height: 3px;
+  background-color: #FFD700;
+  border-radius: 3px;
+  transition: all 0.3s ease;
+}
+ 
+/* Mobile Styles - Media Query */
+@media screen and (max-width: 768px) {
+  .text-container h1 {
+    font-size: 1.5rem;
+    font-weight: 600;
+  }
+  .text-container p {
+    font-size: 1rem;
+}
+  
+  /* Show hamburger icon on mobile */
+  .hamburger {
+    display: flex;
+    z-index: 1001;
+  }
+ 
+  /* Hide menu by default on mobile */
+  .nav-menu {
+    position: fixed;
+    left: -100%;
+    top: 0;
+    flex-direction: column;
+    background-color: var(--color-3);
+    width: 50%;
+    /* height: 60%; */
+    opacity: .9;
+    text-align: center;
+    transition: left 0.3s ease;
+    gap: 0;
+    /* padding-top: 5rem; */
+    z-index: 1000;
+  }
+ 
+  .nav-menu li {
+    margin: 1rem 0;
+  }
+ 
+  .nav-menu li a {
+    font-size: 1.5rem;
+    display: block;
+    /* padding: 1rem; */
+  }
+ 
+  /* Show menu when checkbox is checked */
+  .menu-toggle:checked ~ .nav-menu {
+    left: 0;
+  }
+ 
+  /* Animate hamburger to X when menu is open */
+  .menu-toggle:checked ~ .hamburger .bar:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+ 
+  .menu-toggle:checked ~ .hamburger .bar:nth-child(2) {
+    opacity: 0;
+  }
+ 
+  .menu-toggle:checked ~ .hamburger .bar:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -6px);
+  }
+}
+ 
+/* Tablet Styles */
+@media screen and (max-width: 1024px) and (min-width: 769px) {
+  .nav-menu {
+    gap: 1rem;
+  }
+ 
+  .nav-menu li a {
+    font-size: 0.9rem;
+  }
 }

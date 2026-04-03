@@ -4,11 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <title>Restaurant Website</title>
 </head>
 <body>
   <header>
-    <nav>
+    <!-- <nav>
       <ul>
         <li><a href=""></a>The China Town</li>
         <li><a href="#instagram">Instagram</a></li>
@@ -16,13 +17,35 @@
         <li><a href="#order-online">Order Online</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
-    </nav>
+    </nav> -->
+
+  <nav class="navbar">
+  <div class="logo">
+    <a href="#home">The China Town</a>
+  </div>
+
+  <input type="checkbox" id="menu-toggle" class="menu-toggle">
+  
+  <label for="menu-toggle" class="hamburger">
+    <span class="bar"></span>
+    <span class="bar"></span>
+    <span class="bar"></span>
+  </label>
+
+  <ul class="nav-menu">
+    <!-- <li><a href="#home">Home</a></li> -->
+    <li><a href="#instagram">Instagram</a></li>
+    <li><a href="#google-maps">Google Maps</a></li>
+    <li><a href="#order-online">Order Online</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
 
     <div class="flex-container">
       <img src="images/pexels-nadin-sh-78971847-35517026.jpg" alt="The China Town logo" width="300px" height="400px">
-      <div class="text-container">
+      <div class="text-container" id="home">
         <h1>The China Town</h1>
-        <p>Experience the harmony of ancient tradition and bold flavors at The Chinese Monk. We serve authentic, soul-warming cuisine crafted with mindful preparation and the finest ingredients to bring a touch of Zen to every plate.</p>
+        <p>Experience the harmony of ancient tradition and bold flavors at The China Town. We serve authentic, soul-warming cuisine crafted with mindful preparation and the finest ingredients to bring a touch of Zen to every plate.</p>
         
         <a href="#see-menu" class="cta-button">See Menu</a>
         <a href="#order-online" class="cta-button secondary">Order Online</a>
@@ -75,6 +98,7 @@
         <a href="https://www.swiggy.com/city/jamshedpur/" class="cta-button swiggy">Swiggy</a>
         <p>Serves Monday - Sunday</p>
         <p>From 9:00 AM till 11:00 PM</p>
+        <p>Delivery Charges Rs30 - Rs60 ( may vary )</p>
       </div>
     </div>
   </section>
@@ -97,7 +121,10 @@
       <img src="images/some-tale-IGe6IV7S_IU-unsplash.jpg" alt="dish image" style="grid-area: img-4;">
       <img src="images/prasanta-kr-dutta-yu8eJpRvlS8-unsplash.jpg" alt="dish image" style="grid-area: img-5;">
     </div>
-    <a href="https://www.instagram.com/thechinesemonk/" class="cta-button">Follow Us On Instgram</a>
+    <a href="https://www.instagram.com/" class="cta-button">
+      <i class="fa-brands fa-instagram fa-2xl" style="color: rgb(212, 50, 209);"></i>
+      Follow Us On Instgram
+    </a>
   </section>
 
   <section id="contact">
