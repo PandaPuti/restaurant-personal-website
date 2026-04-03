@@ -1,0 +1,102 @@
+<svg width="400" height="400" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Gradient for background circle -->
+    <radialGradient id="bgGradient" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#8B0000;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#4A0000;stop-opacity:1" />
+    </radialGradient>
+    
+    <!-- Gradient for monk silhouette -->
+    <linearGradient id="monkGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#FFD700;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#FFA500;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Decorative pattern -->
+    <pattern id="pattern" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1" fill="#FFFFFF" opacity="0.1"/>
+    </pattern>
+  </defs>
+  
+  <!-- Background circle -->
+  <circle cx="200" cy="200" r="190" fill="url(#bgGradient)" stroke="#FFD700" stroke-width="3"/>
+  
+  <!-- Subtle pattern overlay -->
+  <circle cx="200" cy="200" r="190" fill="url(#pattern)"/>
+  
+  <!-- Decorative outer ring -->
+  <circle cx="200" cy="200" r="175" fill="none" stroke="#FFD700" stroke-width="1" opacity="0.4"/>
+  
+  <!-- Monk silhouette (simplified, meditative pose) -->
+  <g transform="translate(200, 140)">
+    <!-- Head -->
+    <circle cx="0" cy="0" r="25" fill="url(#monkGradient)"/>
+    
+    <!-- Body (robe) -->
+    <path d="M -30 25 Q -30 30 -25 50 L -15 80 L 15 80 L 25 50 Q 30 30 30 25 L 25 20 Q 20 25 0 25 Q -20 25 -25 20 Z" 
+          fill="url(#monkGradient)"/>
+    
+    <!-- Arms in prayer position -->
+    <ellipse cx="0" cy="55" rx="12" ry="8" fill="url(#monkGradient)"/>
+    
+    <!-- Prayer beads suggestion -->
+    <circle cx="-8" cy="55" r="2" fill="#8B0000"/>
+    <circle cx="-4" cy="56" r="2" fill="#8B0000"/>
+    <circle cx="0" cy="57" r="2" fill="#8B0000"/>
+    <circle cx="4" cy="56" r="2" fill="#8B0000"/>
+    <circle cx="8" cy="55" r="2" fill="#8B0000"/>
+  </g>
+  
+  <!-- Decorative bamboo elements -->
+  <g opacity="0.3">
+    <!-- Left bamboo -->
+    <rect x="40" y="120" width="8" height="160" fill="#FFD700" rx="4"/>
+    <line x1="40" y1="150" x2="48" y2="150" stroke="#8B0000" stroke-width="2"/>
+    <line x1="40" y1="200" x2="48" y2="200" stroke="#8B0000" stroke-width="2"/>
+    <line x1="40" y1="250" x2="48" y2="250" stroke="#8B0000" stroke-width="2"/>
+    
+    <!-- Right bamboo -->
+    <rect x="352" y="120" width="8" height="160" fill="#FFD700" rx="4"/>
+    <line x1="352" y1="150" x2="360" y2="150" stroke="#8B0000" stroke-width="2"/>
+    <line x1="352" y1="200" x2="360" y2="200" stroke="#8B0000" stroke-width="2"/>
+    <line x1="352" y1="250" x2="360" y2="250" stroke="#8B0000" stroke-width="2"/>
+  </g>
+  
+  <!-- Restaurant name - top arc -->
+  <path id="topArc" d="M 80,95 A 120,120 0 0,1 320,95" fill="none"/>
+  <text font-family="'Cinzel', 'Trajan Pro', serif" font-size="28" font-weight="700" letter-spacing="4" fill="#FFD700">
+    <textPath href="#topArc" startOffset="50%" text-anchor="middle">
+      THE CHINESE
+    </textPath>
+  </text>
+  
+  <!-- Restaurant name - bottom text -->
+  <text x="200" y="310" font-family="'Cinzel', 'Trajan Pro', serif" font-size="42" font-weight="700" 
+        letter-spacing="6" fill="#FFD700" text-anchor="middle">
+    MONK
+  </text>
+  
+  <!-- Subtitle -->
+  <text x="200" y="335" font-family="'Cormorant Garamond', Georgia, serif" font-size="14" 
+        font-style="italic" letter-spacing="3" fill="#FFD700" text-anchor="middle" opacity="0.8">
+    AUTHENTIC CUISINE
+  </text>
+  
+  <!-- Decorative Chinese-style corner elements -->
+  <g opacity="0.6">
+    <!-- Top left corner -->
+    <path d="M 70,70 L 85,70 L 85,75 M 70,70 L 70,85 L 75,85" stroke="#FFD700" stroke-width="2" fill="none"/>
+    
+    <!-- Top right corner -->
+    <path d="M 330,70 L 315,70 L 315,75 M 330,70 L 330,85 L 325,85" stroke="#FFD700" stroke-width="2" fill="none"/>
+    
+    <!-- Bottom left corner -->
+    <path d="M 70,330 L 85,330 L 85,325 M 70,330 L 70,315 L 75,315" stroke="#FFD700" stroke-width="2" fill="none"/>
+    
+    <!-- Bottom right corner -->
+    <path d="M 330,330 L 315,330 L 315,325 M 330,330 L 330,315 L 325,315" stroke="#FFD700" stroke-width="2" fill="none"/>
+  </g>
+  
+  <!-- Zen circle (Enso) behind monk - very subtle -->
+  <circle cx="200" cy="165" r="60" fill="none" stroke="#FFD700" stroke-width="3" opacity="0.2"/>
+</svg>
